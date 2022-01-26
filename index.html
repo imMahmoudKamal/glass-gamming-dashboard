@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Glass Gamming Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <div class="circle --one"></div>
+    <div class="circle --two"></div>
+
+    <main class="dashboard">
+      <div class="grid">
+        <div class="grid__left">
+          <div class="user">
+            <img src="./img/user.jfif" alt="user" />
+            <h3>mahmoud kamal</h3>
+            <span>pro member</span>
+          </div>
+
+          <nav class="nav">
+            <ul>
+              <li>
+                <i class="fab fa-twitch"></i>
+                <h3>streams</h3>
+              </li>
+              <li>
+                <i class="fab fa-steam"></i>
+                <h3>games</h3>
+              </li>
+              <li>
+                <i class="fas fa-gamepad"></i>
+                <h3>upcoming</h3>
+              </li>
+              <li>
+                <i class="fas fa-book-alt"></i>
+                <h3>library</h3>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="cta">
+            <a href="#!">
+              <h3>Join pro for free games</h3>
+              <img src="./img/controller.png" alt="cta" />
+            </a>
+          </div>
+        </div>
+
+        <div class="grid__right">
+          <h1 class="grid__right__heading">active games</h1>
+
+          <div class="grid__right__search">
+            <input type="text" placeholder="search" />
+            <i class="fas fa-search"></i>
+          </div>
+
+          <div class="grid__right__content">
+            <ul>
+              <li>
+                <div class="game-card">
+                  <img class="game-card__img" src="./img/pubg.jpg" alt="game" />
+                  <div class="game-card__content" style="--width: 80%">
+                    <h2>battlegrouds mobile</h2>
+                    <span>mobile version</span>
+                    <div></div>
+                  </div>
+                  <span class="game-card__percentage">80%</span>
+                </div>
+              </li>
+
+              <li>
+                <div class="game-card">
+                  <img class="game-card__img" src="./img/fifa.jpg" alt="game" />
+                  <div class="game-card__content" style="--width: 50%">
+                    <h2>EA FIFA 2022</h2>
+                    <span>PC version</span>
+                    <div></div>
+                  </div>
+                  <span class="game-card__percentage">50%</span>
+                </div>
+              </li>
+
+              <li>
+                <div class="game-card">
+                  <img class="game-card__img" src="./img/gow.jfif" alt="game" />
+                  <div class="game-card__content" style="--width: 70%">
+                    <h2>god of war ragnarok</h2>
+                    <span>PS5 version</span>
+                    <div></div>
+                  </div>
+                  <span class="game-card__percentage">70%</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

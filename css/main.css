@@ -1,0 +1,372 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+:root {
+  font-size: 20px;
+  overflow: hidden;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  background-color: #e6f0f5;
+  background: -webkit-gradient(linear, left top, right top, from(#357ac6), to(#56bfc0));
+  background: linear-gradient(to right, #357ac6, #56bfc0);
+  position: relative;
+}
+
+.circle {
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+  border: 1px solid rgba(230, 240, 245, 0.2);
+  -webkit-backdrop-filter: blur(15rem);
+          backdrop-filter: blur(15rem);
+  position: absolute;
+}
+
+.circle.--one {
+  top: 0;
+  right: 12%;
+  background: linear-gradient(45deg, #56bfc0, #2699ad);
+}
+
+.circle.--two {
+  left: 12%;
+  bottom: -5%;
+  background: linear-gradient(30deg, #2167d0, #5aa3d9);
+}
+
+.dashboard {
+  width: clamp(50rem, 60%, 60rem);
+  height: 80%;
+  border-radius: 1rem;
+  background: linear-gradient(135deg, rgba(230, 240, 245, 0.4), rgba(230, 240, 245, 0.1));
+  border: 0.1rem solid rgba(230, 240, 245, 0.2);
+  z-index: 1;
+  -webkit-backdrop-filter: blur(1rem);
+          backdrop-filter: blur(1rem);
+  overflow: hidden;
+}
+
+.grid {
+  width: 100%;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 30% 70%;
+      grid-template-columns: 30% 70%;
+}
+
+.grid__left {
+  padding: 3rem;
+  -webkit-backdrop-filter: blur(1px);
+          backdrop-filter: blur(1px);
+  border-right: 0.1rem solid rgba(230, 240, 245, 0.2);
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: max-content 1fr max-content;
+      grid-template-rows: -webkit-max-content 1fr -webkit-max-content;
+      grid-template-rows: max-content 1fr max-content;
+  gap: 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.grid__left .user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-transform: capitalize;
+  color: rgba(58, 38, 42, 0.8);
+}
+
+.grid__left .user img {
+  width: 100px;
+  border-radius: 50%;
+  border: 0.1rem solid rgba(230, 240, 245, 0.2);
+}
+
+.grid__left .user h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: -0.15rem;
+  background: linear-gradient(30deg, rgba(58, 38, 42, 0.8), #2167d0);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.grid__left .user span {
+  font-size: 0.8rem;
+}
+
+.grid__left .nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+  text-transform: capitalize;
+}
+
+.grid__left .nav li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.grid__left .nav i {
+  width: 2.5rem;
+  font-size: 2rem;
+  text-align: center;
+  background: linear-gradient(45deg, #56bfc0, #2167d0);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.grid__left .nav h3 {
+  font-size: 0.8rem;
+  font-weight: 600;
+  background: linear-gradient(30deg, #3a262a, rgba(58, 38, 42, 0.5));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.grid__left .cta {
+  padding-top: 60%;
+  border-radius: 2rem;
+  border: 0.1rem solid rgba(230, 240, 245, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.grid__left .cta::before {
+  content: '';
+  position: absolute;
+  inset: -1rem;
+  display: block;
+  background: linear-gradient(45deg, #56bfc0 30%, #357ac6);
+  -webkit-filter: blur(1rem);
+          filter: blur(1rem);
+}
+
+.grid__left .cta a {
+  position: absolute;
+  inset: 0;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.2rem;
+}
+
+.grid__left .cta h3 {
+  font-size: 0.9rem;
+  color: #e6f0f5;
+  font-weight: 400;
+}
+
+.grid__left .cta img {
+  width: 5rem;
+  -webkit-transform: rotate(-30deg);
+          transform: rotate(-30deg);
+}
+
+.grid__right {
+  padding: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+
+.grid__right__heading {
+  font-size: 2.5rem;
+  text-transform: capitalize;
+  background: linear-gradient(30deg, rgba(58, 38, 42, 0.8), #2167d0);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.grid__right__search {
+  position: relative;
+  width: 17.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.grid__right__search input {
+  font-family: inherit;
+  outline: none;
+  border: 0;
+  border-radius: 5rem;
+  width: 100%;
+  font-size: 0.8rem;
+  padding: 0.5rem 1rem;
+  background: linear-gradient(135deg, rgba(230, 240, 245, 0.4), rgba(230, 240, 245, 0.1));
+  -webkit-box-shadow: 0 0 0 0.1rem rgba(230, 240, 245, 0.2);
+          box-shadow: 0 0 0 0.1rem rgba(230, 240, 245, 0.2);
+}
+
+.grid__right__search input::-webkit-input-placeholder {
+  color: rgba(58, 38, 42, 0.6);
+  text-transform: capitalize;
+}
+
+.grid__right__search input:-ms-input-placeholder {
+  color: rgba(58, 38, 42, 0.6);
+  text-transform: capitalize;
+}
+
+.grid__right__search input::-ms-input-placeholder {
+  color: rgba(58, 38, 42, 0.6);
+  text-transform: capitalize;
+}
+
+.grid__right__search input::placeholder {
+  color: rgba(58, 38, 42, 0.6);
+  text-transform: capitalize;
+}
+
+.grid__right__search i {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  -webkit-transform: translateY(calc(-50% - 0.1rem));
+          transform: translateY(calc(-50% - 0.1rem));
+  font-size: 0.8rem;
+  color: rgba(58, 38, 42, 0.6);
+  pointer-events: none;
+}
+
+.grid__right__content ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+}
+
+.game-card {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 5fr 1fr;
+      grid-template-columns: 1fr 5fr 1fr;
+  gap: 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #e6f0f5;
+  padding: 1rem;
+  border-radius: 1.5rem;
+  -webkit-box-shadow: 0.5rem 0.5rem 1.5rem rgba(58, 38, 42, 0.25);
+          box-shadow: 0.5rem 0.5rem 1.5rem rgba(58, 38, 42, 0.25);
+}
+
+.game-card__img {
+  width: 4rem;
+  height: 4rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.game-card__content {
+  text-transform: capitalize;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.game-card__content h2 {
+  font-size: 1rem;
+  background: linear-gradient(30deg, rgba(58, 38, 42, 0.8), #2167d0);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.game-card__content span {
+  font-size: 0.8rem;
+  position: relative;
+  top: -0.2rem;
+  background: linear-gradient(30deg, #3a262a, rgba(58, 38, 42, 0.5));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.game-card__content div {
+  height: 1.5rem;
+  border-radius: 2rem;
+  background-color: rgba(58, 38, 42, 0.25);
+  position: relative;
+  overflow: hidden;
+}
+
+.game-card__content div::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  width: var(--width);
+  background: -webkit-gradient(linear, left top, right top, from(#357ac6), to(#56bfc0));
+  background: linear-gradient(90deg, #357ac6, #56bfc0);
+}
+
+.game-card__percentage {
+  font-size: 1.25rem;
+  font-weight: 600;
+  background: linear-gradient(45deg, #2699ad, #56bfc0);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/*# sourceMappingURL=main.css.map */
